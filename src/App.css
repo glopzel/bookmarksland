@@ -1,0 +1,210 @@
+#root {
+  background: white;
+}
+/* you can access all variables here */
+.hero-layout {
+  display: grid;
+  gap: 2em;
+  padding: 2em 0;
+}
+
+.hero, .small-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-wrap {
+  position: relative;
+}
+
+#hero-blub {
+  width: 70%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.toggle-control ul {
+  width: 70%;
+  margin-inline: auto;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+.toggle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+.toggle-section > * {
+  flex: 1;
+}
+
+.content-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-toggle h3 {
+  font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
+  font-weight: 500;
+}
+
+.toggle-control button {
+  cursor: pointer;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  --padding: 3em;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.card-img {
+  margin-inline: auto;
+  margin-bottom: 1em;
+}
+
+.cards-container > * {
+  padding: var(--padding) 0 calc(var(--padding) / 2);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 1em;
+}
+
+#card-dots {
+  margin: 1em 0;
+}
+
+.small-container {
+  align-items: center;
+}
+
+.small-container form {
+  gap: 0.5em;
+}
+
+.small-container form input {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+#footer-nav {
+  display: grid;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+.second-nav > * {
+  text-align: center;
+}
+
+@media (max-width: 50em) {
+
+  .img-toggle {
+    align-self: center;
+  }
+
+  .small-container form {
+    flex-direction: column;
+    gap: 1em;
+    --max-width: 500px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+  }
+
+  .cards-container {
+    gap: 3em;
+    margin-bottom: 6em;
+  }
+
+  #footer-nav > * {
+    margin-inline: auto;
+  }
+
+  .second-nav > * {
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 50em) {
+  #hero-blub {
+    width: 40%;
+  }
+  /* .toggle-section */
+  .hero-layout, #footer-nav {
+    grid-auto-flow: column;
+  }
+  .hero-layout {
+    grid-auto-columns: 1fr;
+  }
+
+  .features-btn {
+    margin: 2em 0;
+  }
+
+  #footer-nav {
+    grid-template-columns: auto 1fr auto;
+    gap: 2em;
+  }
+
+  .toggle-section {
+    flex-direction: row;
+  }
+
+  .content-toggle {
+    align-items: flex-start;
+  }
+
+  .grid-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 80dvh;
+    min-height: 80vh;
+  }
+
+  .cards-container {
+    gap: 1em;
+  }
+
+  #start {
+    align-self: start;
+  }
+  
+  #center {
+    align-self: center;
+  }
+  
+  #end {
+    align-self: flex-end;
+  }
+
+  /* this is the ul */
+  .second-nav {
+    display: flex;
+    gap: 2em;
+  }
+
+  .toggle-control ul {
+    width: 70%;
+    display: flex;
+  }
+
+  .toggle-control ul > * {
+    flex: 1;
+    text-align: center;
+  }
+
+}
+

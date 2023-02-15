@@ -1,0 +1,257 @@
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --light-gray: hsl(0, 0%, 97%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  + a touch of andy bell's reset
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: 'Rubik', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+/* end JC reset */
+a {
+  display: inline-block;
+}
+
+h1, h2, .cta-heading {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(1.875rem, 2vw + 1rem, 3rem);
+  letter-spacing: -0.09px;
+  line-height: 40px;
+}
+
+h2, .cta-heading {
+  font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
+}
+
+h2 {
+  margin: 1em;
+}
+
+p {
+  font-size: 18px;
+  color: hsl(229, 8%, 55%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-intro {
+  --max-width: 500px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-p {
+  font-size: 15px;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+.hero .btn {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+
+.btn-shadow {
+  box-shadow: 0 5px 10px rgba(220, 220, 220);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: white;
+}
+
+.primary-btn {
+  background: var(--primary-soft-blue);
+  color: white;
+}
+
+.primary-btn:hover {
+  color: var(--primary-soft-blue);
+  border: 1px solid var(--primary-soft-blue);
+}
+
+.neutral-btn {
+  background: white;
+  color: var(--neutral-very-dark-blue);
+  background: var(--light-gray);
+}
+
+.neutral-btn:hover {
+  border: 1px solid var(--neutral-grayish-blue);
+}
+
+.accent-btn {
+  background: var(--primary-soft-red);
+  color: white;
+}
+
+.accent-btn:hover {
+  border: 1px solid var(--primary-soft-red);
+  color: var(--primary-soft-red);
+}
+
+.features-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  border-bottom: 1px solid var(--neutral-grayish-blue);
+  width: 100%;
+  color: var(--neutral-grayish-blue);
+  padding: 0.5em 0;
+  font-size: 16px;
+  /* margin: 2em 0; */
+}
+
+.features-btn:hover {
+  color: var(--primary-soft-red);
+  border-bottom: 1px solid var(--primary-soft-red);
+}
+
+ a {
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ a:hover {
+   color: var(--primary-soft-red);
+ }
+
+ .cta {
+   background: var(--primary-soft-blue);
+   color: white;
+   padding: 5em 0;
+ }
+
+ .cta span {
+   letter-spacing: 5px;
+ }
+
+ .footer {
+   background: var(--neutral-very-dark-blue);
+   color: white;
+   padding: 3em 0;
+ }
+
+ #footer-nav a {
+   font-size: 13px;
+  color: rgb(220, 220, 220);
+}
+
+ .container {
+  --max-width: 1110px;
+  --padding: 2rem;
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  gap: 2em;
+}
+
+@media (max-width: 50em) {
+  .hero-btns {
+    justify-content: center;
+    gap: 1em;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .text-res {
+    text-align: center;
+  }
+}
+
+@media (min-width: 50em) {
+  header {
+    --max-width: 1110px;
+    --padding: 2rem;
+    width: min(var(--max-width), 100% - var(--padding) * 2);
+    margin-inline: auto;
+  }
+
+  h1 {
+    line-height: 52px;
+    letter-spacing: -0.15px;
+  }
+
+  .small-container {
+    gap: 1em;
+  }
+
+}
