@@ -4,7 +4,7 @@ import twitterIcon from "../assets/images/icon-twitter.svg"
 
 const Footer = () => {
   return (
-    <footer class='footer'>
+    <footer className='footer'>
         <div id="footer-nav" className="container">
             <div className="logo">
                 <img src={logo} alt="logo" />

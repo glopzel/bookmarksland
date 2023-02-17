@@ -9,7 +9,7 @@ const Header = () => {
                 <li><a href="">Features</a></li>
                 <li><a href="">Pricing</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="" class='btn accent-btn'>Login</a></li>
+                <li><a href="" className='btn accent-btn'>Login</a></li>
             </ul>
         </nav>
     </header>

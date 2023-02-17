@@ -90,14 +90,14 @@ h2 {
 
 p {
   font-size: 18px;
-  color: hsl(229, 8%, 55%);
+  color: hsl(230, 8%, 55%);
 }
 
 .text-center {
   text-align: center;
 }
 
-.section-intro {
+.section-intro, .qs {
   --max-width: 500px;
   --padding: 1rem;
   width: min(var(--max-width), 100% - var(--padding) * 2);
@@ -164,15 +164,18 @@ p {
   color: var(--primary-soft-red);
 }
 
-.features-btn {
+.toggle-question, .features-btn {
   border: 1px solid transparent;
   background: transparent;
+  cursor: pointer;
+}
+
+.features-btn {
   border-bottom: 1px solid var(--neutral-grayish-blue);
   width: 100%;
   color: var(--neutral-grayish-blue);
   padding: 0.5em 0;
   font-size: 16px;
-  /* margin: 2em 0; */
 }
 
 .features-btn:hover {
@@ -220,6 +223,10 @@ p {
 .flex {
   display: flex;
   gap: 2em;
+}
+
+.question-p {
+  color: rgba(36, 42, 69, 1);
 }
 
 @media (max-width: 50em) {

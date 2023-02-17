@@ -51,6 +51,14 @@
   align-items: center;
 }
 
+.answer {
+  display: none;
+}
+
+.open-answer {
+  display: block;
+}
+
 .content-toggle h3 {
   font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
   font-weight: 500;
@@ -83,6 +91,32 @@
 
 #card-dots {
   margin: 1em 0;
+}
+
+.link-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-top: 1px solid rgb(220, 220, 220);
+}
+
+.qs {
+  margin-top: 1.5em;
+}
+
+.q-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 2em;
+}
+
+#q-btn {
+  margin-inline: auto;
+}
+
+.answer {
+  padding: 0.5em 0;
 }
 
 .small-container {

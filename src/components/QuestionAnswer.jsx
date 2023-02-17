@@ -1,16 +1,21 @@
+import { useState } from 'react'
+import arrow from '../assets/images/icon-arrow.svg'
+
 const QuestionAnswer = ({question, answer}) => {
+  const [isActive, setActive] = useState(false)
+
+  const toggleHeight = () => {
+    setActive(!isActive)
+  }
+
   return (
-    <div>
+    <>
       <div className="link-icon">
-        <a href="">{question}</a>
-        <img src='' alt="" />
+        <p className='question-p'>{question}</p>
+        <button className='toggle-question' onClick={() => toggleHeight()}><img src={arrow} alt=""/></button>
       </div>
-        {/* <h3>{question}</h3>
-        <button>
-            <img src="" alt="down arrow" />
-        </button> */}
-        <p>{answer}</p>
-    </div>
+      <p className={isActive ? "open-answer answer" : "answer"}>{answer}</p>
+    </>
   )
 }
 
