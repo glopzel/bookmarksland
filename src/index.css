@@ -24,6 +24,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -66,6 +70,10 @@ ul[role="list"] {
   list-style: none;
 }
 /* end JC reset */
+.hidden {
+  display: none;
+}
+
 a {
   display: inline-block;
 }
@@ -171,7 +179,7 @@ p {
 }
 
 .features-btn {
-  border-bottom: 1px solid var(--neutral-grayish-blue);
+  border-bottom: 2px solid var(--neutral-grayish-blue);
   width: 100%;
   color: var(--neutral-grayish-blue);
   padding: 0.5em 0;
@@ -180,7 +188,11 @@ p {
 
 .features-btn:hover {
   color: var(--primary-soft-red);
-  border-bottom: 1px solid var(--primary-soft-red);
+  border-bottom: 2px solid var(--primary-soft-red);
+}
+
+.content-selected {
+  border-bottom: 2px solid hsl(0, 94%, 66%);
 }
 
  a {

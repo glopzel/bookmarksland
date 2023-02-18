@@ -20,7 +20,7 @@ const Features = () => {
 
   return (
     <div>
-      <div id="features-blub" className="container">
+      <div id="features-container" className="container">
         <div className="features grid-section">
           <SectionStart
             sectionHeading="Features"
@@ -30,17 +30,17 @@ const Features = () => {
           <div className="toggle-control">
             <ul role="list">
               <li>
-                <button className="features-btn" onClick={() => setIdx(0)}>
+                <button className={idx === 0 ? "content-selected features-btn" : "features-btn"} onClick={() => setIdx(0)}>
                   Simple Bookmarking
                 </button>
               </li>
               <li>
-                <button className="features-btn" onClick={() => setIdx(1)}>
+                <button className={idx === 1 ? "content-selected features-btn" : "features-btn"} onClick={() => setIdx(1)}>
                   Speedy Searching
                 </button>
               </li>
               <li>
-                <button className="features-btn" onClick={() => setIdx(2)}>
+                <button className={idx === 2 ? "content-selected features-btn" : "features-btn"} onClick={() => setIdx(2)}>
                   Easy Sharing
                 </button>
               </li>

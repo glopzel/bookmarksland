@@ -1,6 +1,10 @@
 #root {
   background: white;
 }
+/* header */
+.mobile-nav-toggle {
+  border-style: none;
+}
 /* you can access all variables here */
 .hero-layout {
   display: grid;

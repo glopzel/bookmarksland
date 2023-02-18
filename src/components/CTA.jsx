@@ -1,6 +1,6 @@
 const CTA = () => {
   return (
-    <div className="cta">
+    <div id="contact" className="cta">
       <div className="container">
       <section className="small-container flex">
             <span className="text-center">35,000+ already joined</span>
