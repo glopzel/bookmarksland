@@ -17,12 +17,13 @@ const Header = () => {
   useEffect(() => {
     const primaryNav = ref.current;
  
-    const navBtn = document.querySelector('.mobile-nav-toggle');
-    const attr = navBtn.getAttribute('aria-expanded');
-
-    document.body.classList.toggle('hide-overflow');
-
-    primaryNav.setAttribute('data-visible', attr);
+    if (navExpanded) {
+      document.body.classList.add('hide-overflow');
+    } else {
+      document.body.classList.remove('hide-overflow')
+    }
+  
+    primaryNav.setAttribute('data-visible', navExpanded);
 
   }, [navExpanded]);
 
