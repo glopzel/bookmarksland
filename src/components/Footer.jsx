@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
         <div id="footer-nav" className="container">
-            <div className="logo">
+            <div className="footer-logo">
                 <img src={logo} alt="logo" />
             </div>
         <ul role='list' className="second-nav">
