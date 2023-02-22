@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import arrow from '../assets/images/icon-arrow.svg'
 
 const QuestionAnswer = ({question, answer}) => {
   const [isActive, setActive] = useState(false)
@@ -12,7 +11,7 @@ const QuestionAnswer = ({question, answer}) => {
     <>
       <div className="link-icon">
         <p className='question-p'>{question}</p>
-        <button className='toggle-question' onClick={() => toggleHeight()}><img src={arrow} alt=""/></button>
+        <button className='toggle-question' onClick={() => toggleHeight()}><svg className={isActive ? "control-up" : ""} xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke={isActive ? "#fa5757" : "#5267DF"} stroke-width="3" d="M1 1l8 8 8-8"/></svg></button>
       </div>
       <p className={isActive ? "open-answer answer" : "answer"}>{answer}</p>
     </>

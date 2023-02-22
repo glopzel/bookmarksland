@@ -250,3 +250,8 @@ a:hover {
 .hide-overflow {
   overflow: hidden;
 }
+
+.control-up  {
+  transition: all 250ms ease-in-out;
+  transform: rotate(180deg);
+}
