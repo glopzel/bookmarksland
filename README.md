@@ -21,6 +21,5 @@
 
 ### Continued development
 
-- Navigation: nav links don't have a href
 - Make login view
 - improve FAQ, transition when the answer is shown
