@@ -8,8 +8,11 @@ const Header = () => {
   const [navExpanded, setNavExpanded] = useState(false)
 
   const toggleNav = (e) => {
+    
+    if (e) {
+      e.currentTarget.setAttribute('aria-expanded', !navExpanded)
+    }
     setNavExpanded(!navExpanded)
-    e.currentTarget.setAttribute('aria-expanded', !navExpanded)
   }
 
   const ref = useRef(null);
@@ -20,7 +23,7 @@ const Header = () => {
     if (navExpanded) {
       document.body.classList.add('hide-overflow');
     } else {
-      document.body.classList.remove('hide-overflow')
+      document.body.classList.remove('hide-overflow');
     }
   
     primaryNav.setAttribute('data-visible', navExpanded);
@@ -36,9 +39,9 @@ const Header = () => {
         </button>
         <nav className="first-nav">
             <ul ref={ref} role='list' data-visible="false" id="primary-navigation" className="primary-navigation">
-                <li><a className="nav-btn" href="#">Features</a></li>
-                <li><a className="nav-btn" href="#">Pricing</a></li>
-                <li><a className="nav-btn" href="#">Contact</a></li>
+                <li><a className="nav-btn" href="#features-container" onClick={() => navExpanded ? toggleNav() : ''}>Features</a></li>
+                <li><a className="nav-btn" href="#download-section" onClick={() => navExpanded ? toggleNav() : ''}>Pricing</a></li>
+                <li><a className="nav-btn" href="#contact" onClick={() => navExpanded ? toggleNav() : ''}>Contact</a></li>
                 <li><a id="#login" href="#" className='btn accent-btn login-nav-btn'>Login</a></li>
             </ul>
         </nav>
