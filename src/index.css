@@ -110,7 +110,7 @@ p {
 }
 
 .section-intro,
-.qs {
+.qs, .small-container {
   --max-width: 500px;
   --padding: 1rem;
   width: min(var(--max-width), 100% - var(--padding) * 2);
