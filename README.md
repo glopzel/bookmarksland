@@ -1,7 +1,7 @@
 # BOOKMARK manager landing page
 
 ## Screenshot
-
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/74939915/221968171-64ffb09f-9f90-4f2a-946e-07aca2b9f6ac.gif)
 
 
 ## Links
